@@ -5,6 +5,8 @@
     --color-accent: #ff5533;
     --color-primary: #e5e5e5;
     --color-bg: #272a2f;
+    /* //size */
+    --size-brs:4px;
 }
 
 * {
