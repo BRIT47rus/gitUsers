@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -7,7 +8,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.[contenthash].js',
-        publishPath: '/',
     },
     module: {
         rules: [
@@ -39,6 +39,9 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: './src/index.html',
+        }),
+        new ESLintPlugin({
+            extensions: ['js', 'ts', 'tsx'],
         }),
     ],
     devServer: {

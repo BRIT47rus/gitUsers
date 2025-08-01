@@ -1,0 +1,43 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 0 21px 0;
+}
+.header__title {
+  text-transform: 'capitalize';
+  color: var(--color-accent);
+}
+
+.header__title {
+}
+.header__search-container {
+  display: flex;
+}
+.header__input-container {
+  background: var(--color-primary);
+  border-radius: 4px;
+  padding: 8px 4px;
+  margin-right: 8px;
+}
+.header__input {
+  color: var(--color-accent);
+  font-weight: 900;
+  outline: none;
+  background: none;
+  border: none;
+}
+.header__btn-container {
+  background: var(--color-accent);
+  padding: 8px 4px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.header__btn {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 900;
+  pointer-events: none;
+}

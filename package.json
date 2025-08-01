@@ -1,37 +1,46 @@
 {
-    "name": "packege.json",
+    "name": "news",
     "version": "1.0.0",
-    "main": "index.js",
     "scripts": {
-        "start": " webpack serve"
+        "dev": "webpack serve",
+        "build": "webpack",
+        "eslint": "eslint --ext .ts,.tsx,.js ./ --fix",
+        "prettier": "prettier --write \"{**/*,*}.{tsx,ts,js}\"",
+        "prettier-check": "prettier --check \"{**/*,*}.{tsx,ts,js}\""
     },
-    "author": "vladimir",
+    "keywords": [],
+    "author": "",
     "license": "ISC",
     "description": "",
     "dependencies": {
         "@babel/cli": "^7.28.0",
         "@babel/core": "^7.28.0",
         "@babel/preset-react": "^7.27.1",
-        "css-modules-typescript-loader": "^4.0.1",
-        "html-webpack-plugin": "^5.6.3",
-        "react": "^19.1.1",
-        "react-dom": "^19.1.1",
-        "react-router-dom": "^7.7.1",
-        "webpack": "^5.101.0"
-    },
-    "devDependencies": {
-        "@babel/preset-env": "^7.28.0",
-        "@types/react": "^19.1.9",
-        "@types/react-dom": "^19.1.7",
-        "@types/react-router-dom": "^5.3.3",
+        "babel-loader": "^10.0.0",
         "css-loader": "^7.1.2",
-        "html-loader": "^5.1.0",
-        "sass": "^1.89.2",
-        "sass-loader": "^16.0.5",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-webpack-plugin": "^5.0.2",
+        "html-webpack-plugin": "^5.6.3",
+        "prettier": "^3.6.2",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "react-router-dom": "^7.7.1",
         "style-loader": "^4.0.0",
-        "ts-loader": "^9.5.2",
-        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.38.0",
+        "webpack": "^5.100.2",
         "webpack-cli": "^6.0.1",
         "webpack-dev-server": "^5.2.2"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.31.0",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@types/react-router-dom": "^5.3.3",
+        "@typescript-eslint/eslint-plugin": "^8.38.0",
+        "@typescript-eslint/parser": "^8.38.0",
+        "eslint": "^9.31.0",
+        "eslint-config-prettier": "^10.1.8",
+        "ts-loader": "^9.5.2",
+        "typescript": "^5.8.3"
     }
 }
