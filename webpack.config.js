@@ -7,24 +7,24 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.[contenthash].js',
-        // publishPath: '/',
+        publishPath: '/',
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
                 use: 'babel-loader',
+                exclude: /node_modules/,
             },
-            {
-                test: /\.css$/,
 
+            {
+                test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(ts|tsx)$/,
-                exclude: /node_modules/,
                 loader: 'ts-loader',
+                exclude: /node_modules/,
             },
 
             {
