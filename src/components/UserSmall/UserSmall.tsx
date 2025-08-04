@@ -1,11 +1,40 @@
 import { FC } from 'react';
 import './UserSmall.css';
+import { I_User } from '../types';
 interface UserProps {
   gridArea?: number;
   big?: boolean;
+  user?: I_User;
 }
 
-export const UserSmall: FC<UserProps> = ({ gridArea = 1, big = false }) => {
+export const UserSmall: FC<UserProps> = ({ gridArea = 1, big = false, user }) => {
+  if (user) {
+    return (
+      <div className={`user ${big ? 'user-big' : 'user-small'}`} style={{ gridArea: `u${gridArea}` }}>
+        <div className="user__avatar">
+          <img src={user.avatar_url} alt="avatar" className="user__avatar-img " />
+        </div>
+        <div className="user__info">
+          <span className="user__info-name text-accent">{user.name} </span>
+
+          {big ? (
+            <div className="user-big__info">
+              <p>
+                <span className="text-accent">{user.followers}k</span> •{' '}
+                <span className="text-accent">{user.following}</span> <span>подписчиков</span> •{' '}
+                <span className="text-accent">{user.url}</span>
+              </p>
+            </div>
+          ) : (
+            <span className="user__info-desc">
+              {user.public_repos || 0} репозиториев <a href={user.organizations_url}>Организация</a>
+            </span>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={`user ${big ? 'user-big' : 'user-small'}`} style={{ gridArea: `u${gridArea}` }}>
       <div className="user__avatar">

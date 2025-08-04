@@ -3,21 +3,18 @@
 export interface I_User {
   login: string;
   id: 1;
-  node_id: string;
+
   avatar_url: string;
-  gravatar_id: string;
   url: string;
-  html_url?: string;
-  followers_url?: string;
-  following_url?: string;
-  gists_url?: string;
-  starred_url?: string;
-  subscriptions_url: string;
-  organizations_url?: string;
-  repos_url?: string;
-  events_url?: string;
-  received_events_url?: string;
-  type?: string;
-  user_view_type?: string;
-  site_admin?: boolean;
+  organizations_url: 'https://api.github.com/users/mojombo/orgs';
+  name: 'Tom Preston-Werner';
+  company: '@chatterbugapp, @redwoodjs, @preston-werner-ventures ';
+  location: 'San Francisco';
+
+  followers: 24283;
+  following: 11;
+  created_at: '2007-10-20T05:24:19Z';
+  updated_at: '2025-07-01T12:37:42Z';
+  public_repos: number;
+  public_gists: number;
 }
