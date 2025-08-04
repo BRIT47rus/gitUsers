@@ -5,7 +5,7 @@ interface UserProps {
   big?: boolean;
 }
 
-export const UserSmall: FC<UserProps> = ({ gridArea = 1, big = true }) => {
+export const UserSmall: FC<UserProps> = ({ gridArea = 1, big = false }) => {
   return (
     <div className={`user ${big ? 'user-big' : 'user-small'}`} style={{ gridArea: `u${gridArea}` }}>
       <div className="user__avatar">
