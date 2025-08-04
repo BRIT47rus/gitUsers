@@ -1,7 +1,10 @@
 .App {
-   max-width: 1920px;
-   min-width:670px ;
-    height: 100vh;
-        margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1035px;
+  min-width: 670px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
 }

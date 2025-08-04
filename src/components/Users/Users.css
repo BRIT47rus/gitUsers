@@ -1,2 +1,12 @@
 .Users {
 }
+.Users-container {
+  display: grid;
+  grid-template-areas:
+    'u1 u2 u3'
+    'u4 u5 u6'
+    'u7 u8 u9';
+  grid-template-columns: 1fr 1fr 1fr;
+  min-width: 100%;
+  gap: 40px;
+}

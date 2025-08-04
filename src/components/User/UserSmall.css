@@ -1,0 +1,6 @@
+.user {
+  outline: 1px solid blue;
+  min-width: 200px;
+  min-height: 64px;
+  max-height: 160px;
+}
