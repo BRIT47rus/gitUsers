@@ -1,4 +1,4 @@
-import { UserSmall } from '../User/UserSmall';
+import { UserSmall } from '../UserSmall/UserSmall';
 import './Users.css';
 export const Users = () => {
   return (
