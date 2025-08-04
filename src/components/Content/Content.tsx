@@ -1,3 +1,4 @@
+import Repository from '../Repository/Repository';
 import UserBig from '../UserBig/UserBig';
 // import { Users } from '../Users/Users';
 import './Content.css';
@@ -7,6 +8,7 @@ export const Content = () => {
     <main className="Content">
       {/* <Users /> */}
       <UserBig />
+      <Repository />
     </main>
   );
 };
