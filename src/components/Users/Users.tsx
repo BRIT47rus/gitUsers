@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { UserSmall } from '../UserSmall/UserSmall';
 import './Users.css';
 import { I_User } from '../types';
+import { url } from '../helpers/api';
 export const Users = () => {
   // https://docs.github.com/en/rest/reference/users
   const [users, setUsers] = useState<I_User[]>();
   useEffect(() => {
-    fetch('https://api.github.com/users?per_page=9')
+    fetch(url + '?per_page=9')
       .then((response) => response.json())
       .then((res) => {
         setUsers(res);
